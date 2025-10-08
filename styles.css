@@ -1,0 +1,429 @@
+:root {
+  /* variables */
+  --cg-black: rgb(30, 32, 32);
+  --cg-blue: rgb(36, 94, 255);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+  --cg-heading-font: "Staatliches", sans-serif;
+  --cg-body-font: "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, #111, #373737);
+  background-attachment: fixed;
+  color: var(--cg-white);
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: var(--cg-body-font);
+  letter-spacing: 0.5px;
+}
+
+/* CSS for navigation */
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 7%;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  color: var(--cg-white);
+  padding: 0px 0px;
+
+  /* Debug border */
+  /* border: solid red; */
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 30px;
+  list-style: none;
+
+  /* Debug border */
+  /* border: solid blue; */
+}
+
+.navbar a {
+  color: var(--cg-white);
+  font-weight: bold;
+  margin: 0 12px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-family: var(--cg-heading-font);
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: var(--cg-blue);
+  text-decoration: underline;
+}
+
+.navbar a:active {
+  color: var(--cg-blue);
+}
+
+.logo a {
+  font-family: var(--cg-heading-font);
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logo a:hover {
+  text-decoration: None;
+}
+
+main {
+  padding: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: var(--cg-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 60px;
+  color: var(--cg-white);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* CSS for portfolio grid */
+
+.project {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width: 900px;
+  margin: 2em auto;
+
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  overflow: hidden;
+
+  /* Debug border */
+  /* border: 2px solid blue; */
+}
+
+.item-link {
+  flex: 2;
+
+  /* Debug border */
+  /* border: 2px solid red; */
+}
+
+.project-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+
+  /* Debug border */
+  /* border: 2px solid black; */
+}
+
+.project-details {
+  display: flex;
+  background-color: rgba(20, 20, 20, 0.9);
+  color: var(--cg-white);
+  flex: 1;
+  max-width: 300px;
+  height: 500px;
+  flex-shrink: 1;
+  padding: 0 20px;
+  margin: 0px;
+  line-height: 1.5;
+
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  /* Debug border */
+  /* border: 2px solid green; */
+}
+
+.project-details a {
+  color: #66b2ff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.project-details a:hover {
+  color: #99ccff;
+  text-decoration: underline;
+}
+
+.project-details {
+  font-weight: lighter;
+  font-family: var(--cg-body-font);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: var(--cg-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* CSS for home page */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(15, 15, 15, 0.9);
+  color: var(--cg-white);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.about-image img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.about-text {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.about-text h2 {
+  font-size: 26px;
+  font-family: var(--cg-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-weight: lighter;
+  font-family: var(--cg-body-font);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* CSS for resume page */
+
+.button {
+  background: linear-gradient(90deg, #222, #444);
+  font-family: var(--cg-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  color: var(--cg-white);
+
+  padding: 5px 7px;
+  text-align: center;
+
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: var(--cg-blue);
+}
+
+.resume h2 {
+  font-family: var(--cg-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.resume p {
+  font-weight: lighter;
+  font-family: var(--cg-body-font);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* CSS for contact form */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--cg-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Add some spacing to the form */
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* CSS for footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cg-white);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+/* link styles for regular text links */
+a {
+  color: #7abaff;
+}
+
+a:hover,
+a:active {
+  color: #a8d4ff;
+}
+
+.social-links {
+  position: absolute;
+  right: 20px; /* moves links to bottom-right corner */
+  bottom: 10px; /* adjusts vertical placement */
+}
+
+.social-links a {
+  margin-left: 15px;
+  color: #7abaff; /* matches your lighter link blue */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social-links a:hover {
+  color: #a8d4ff; /* lighter hover effect */
+  text-decoration: underline;
+}
+
+/* CSS for blog page */
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 30px; /* spacing between posts */
+}
+
+.blog {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto 30px auto;
+
+  background-color: rgba(15, 15, 15, 0.9);
+  border: 1px solid #444;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 19, 19, 0.5);
+}
+
+.blog-image {
+  width: 50%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--cg-white);
+}
+
+.blog-title {
+  font-family: var(--cg-heading-font);
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: var(--cg-white);
+}
+
+.blog-date {
+  font-size: 14px;
+  color: var(--cg-white);
+  margin-bottom: 15px;
+}
+
+.blog-description {
+  font-family: var(--cg-body-font);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.blog-title-page {
+  text-align: center;
+  font-size: 2em;
+  
+  margin-bottom: 40px;
+  color: var(--cg-white);
+}
