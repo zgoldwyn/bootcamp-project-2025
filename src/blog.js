@@ -1,23 +1,23 @@
 var Blogs = [
     {
-        title: "Blog1",
-        date: "Oct 7",
-        description: "first blog",
-        image: "screenshot1.png",
-        imageAlt: "stars",
-        slug: "blog1",
+        title: "Culinary",
+        date: "Oct 14",
+        description: "This blog post explores my culinary creations and experiments in the kitchen of PCV.",
+        image: "steak.jpeg",
+        imageAlt: "steak",
+        slug: "blog2",
     },
     {
-        title: "Blog2",
+        title: "Steady State Visual Evoked Potentials (SSVEP)",
         date: "Oct 7",
-        description: "second blog",
-        image: "screenshot1.png",
-        imageAlt: "also stars",
-        slug: "blog2",
+        description: "This blog post is to explain some interesting research I've done into SSVEPs and their use in Brain to Computer Interfaces.",
+        image: "SSVEP_Image.png",
+        imageAlt: "SSVEP",
+        slug: "blog1",
     },
 ];
 var blogContainer = document.getElementById("blog-container");
-Blogs.forEach((function (blog) {
+Blogs.forEach(function (blog) {
     var blogdiv = document.createElement("div");
     blogdiv.classList.add("blog");
     var title = document.createElement("h1");
@@ -45,4 +45,4 @@ Blogs.forEach((function (blog) {
     link.append(blogdiv);
     // Append the link to the container
     blogContainer === null || blogContainer === void 0 ? void 0 : blogContainer.append(link);
-}));
+});

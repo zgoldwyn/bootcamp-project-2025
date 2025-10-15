@@ -360,6 +360,7 @@ a:active {
   align-items: center;
   padding: 40px 20px;
   gap: 30px; /* spacing between posts */
+  text-decoration: none;
 }
 
 .blog {
@@ -384,8 +385,8 @@ a:active {
 }
 
 .blog-image {
-  width: 50%;
-  height: 350px;
+  width: 40%;
+  height: 400px;
   object-fit: cover;
   object-position: center;
 }
@@ -406,24 +407,27 @@ a:active {
   letter-spacing: 2px;
   margin-bottom: 10px;
   color: var(--cg-white);
+  text-decoration: none;
 }
 
 .blog-date {
   font-size: 14px;
   color: var(--cg-white);
   margin-bottom: 15px;
+  text-decoration: none;
 }
 
 .blog-description {
   font-family: var(--cg-body-font);
   font-size: 17px;
   line-height: 1.6;
+  text-decoration: none;
 }
 
 .blog-title-page {
   text-align: center;
   font-size: 2em;
-  
+
   margin-bottom: 40px;
   color: var(--cg-white);
 }
